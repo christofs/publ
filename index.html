@@ -216,18 +216,18 @@ Image source: Rachael Gallager et al., 2019, URL: https://ecoevorxiv.org/kac45/,
     * Marked-up structure: people can find introduction, method, conclusion sections automatically
     * Marked-up entities: people can find out precisely what you are talking about
     * Machine-readable statements: people can find out what you key points are
-    
---
-## Bibliographies as Data
-* use machine-readable formats: BibTex
-* use tools that produce such formats: Zotero, Citavi, etc.
-* publish the BibTex along with your paper (data supplement)
-* publish the BibTex along with your paper (supplement)
-* Build citation networks
 
 --
-## The bibtex format
-<a href="data/bibtext.bib"><img height="550" data-src="img/bibtex.png"/></a>
+## Bibliographies as Data
+* use machine-readable formats: BibTex, BibJSON
+* use tools that produce such formats: Zotero, Citavi, etc.
+* publish the BibTex along with your paper (supplement)
+
+--
+## The BibTex format
+Benureau, Fabien C. Y., and Nicolas P. Rougier. "Re-Run, Repeat, Reproduce, Reuse, Replicate: Transforming Code into Scientific Contributions." *Frontiers in Neuroinformatics* 11 (January 4, 2018). DOI: https://doi.org/10.3389/fninf.2017.00069.
+<br/><br/>
+<a href="data/bibtex.bib"><img height="350" data-src="img/bibtex1.png"/></a>
 
 --
 ## Marked-up structure
@@ -245,7 +245,6 @@ Image source: Rachael Gallager et al., 2019, URL: https://ecoevorxiv.org/kac45/,
 --
 ## Journal article in XML-TEI
 <a href="data/jtei-oc-ds-schoch-144-source.xml"><img height="550" data-src="img/jtei-xml.png"/></a>
- 
 
 --
 ## Marked-up Named Entities
@@ -265,8 +264,35 @@ Image source: Rachael Gallager et al., 2019, URL: https://ecoevorxiv.org/kac45/,
 
 --
 ## Linked Open Data
-* Based on metadata and entities
-* Based on the actual semantic content
+* Machine-readable information about the article
+* Embedded into the article itself
+* Based on metadata
+    * publication date, publisher, etc.
+    * places, people 
+* Based on entities and semantic content
+    * topics
+    * key statements
+
+--
+## Linked Open Data
+<img height="250" data-src="img/math.png"/>
+
+```
+ISBN:9780141985411 HAS_TITLE "Weapons of Math Destruction"
+
+ISBN:9780141985411 HAS_PUBLICATION_YEAR "2016"
+
+ISBN:9780141985411 HAS_SUBJECT "Big Data"
+
+ISBN:9780141985411 HAS_THESIS {"Big Data" CREATES "Inequality"}
+
+ISBN:9780141985411 HAS_THESIS {"Big Data" ENDANGERS "Democracy"}
+```
+
+--
+## Example Query in Wikidata
+<a href="https://query.wikidata.org/#select%20%3Fauthor%20%3Fwork%20%3FauthorLabel%20%3FworkLabel%20%20where%20%7B%0A%20%20%3Fwork%20wdt%3AP31%20wd%3AQ47461344%3B%0A%20%20wdt%3AP921%20wd%3AQ21198%3B%0A%20%20wdt%3AP50%20%3Fauthor.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0Alimit%2050"><img height="500" data-src="img/wikidata-books.png"/></a>
+Written works with main subject Computer Science
 
 -
 # Conclusions
@@ -274,7 +300,8 @@ Image source: Rachael Gallager et al., 2019, URL: https://ecoevorxiv.org/kac45/,
 --
 ## Take-away points
 * There is a lot more to publications than static PDF
-* The technology is out there, but using it is still hard
+* Most of the added features are not possible in print or PDF
+* The technology is out there, but using it is still challenging
 * Publishing text, data and code in open, standardized formats is the first step
 
 
