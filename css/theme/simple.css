@@ -78,7 +78,8 @@ body {
  *********************************************/
 .reveal p {
   margin: 15px 0;
-  font-size: 0.8em; 
+  font-size: 1.0 em; 
+  /*text-align: left;*/
   line-height: 1.1; }
 
 /* Ensure certain elements are never larger than the slide itself */
